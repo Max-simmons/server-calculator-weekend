@@ -1,6 +1,8 @@
-const numbers = [
-    {num1: '2',
-     num2: '3'}  
+let calculation = [
+    {num1: 2,
+     math: '+',
+     num2: 3,
+     result: 5}  
 ];
 
 const express = require('express');
@@ -10,10 +12,15 @@ app.use(express.static('server/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-app.get('/numbers', (req,res) => {
-
-    res.send(numbers);
+app.get('/', (req,res) => {
+    console.log('GET/calculation');
+    res.send(calculation);
 })
+
+
+
+
+
 
 
 
