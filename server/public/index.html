@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="jquery-3.6.4.js"></script>
-    <script src="script.js"></script>
+    <script src="vendors/jquery-3.6.4.js"></script>
+    <script src="scripts/client.js"></script>
     <title>Server Side Calculator</title>
 </head>
 <body>
@@ -16,15 +16,17 @@
         <input 
         id="first-num"
         placeholder="Number"
-        type="text">
-        <button id="add-button">+</button>
-        <button id="subtract-button">-</button>
-        <button id="multiple-button">*</button>
-        <button id="divide-button">/</button>
+        type="number">
+        <select id="math">
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+        </select>
         <input
         id="second-num"
         placeholder="Number"
-        type="text">
+        type="number">
         <button id="equal-button">=</button>
         <button id="clear-button">C</button>
     </form>
@@ -33,7 +35,9 @@
 <div>
     <h3><span id="answer"></span></h3>    
 </div>
-<div class="answer-history">
+<div id="outputs">
+    <h2 id=answer-out></h2>
+    <ul id="answer-history"> </ul>
 
 </div>
 </body>
